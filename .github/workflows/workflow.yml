@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     name: CI workflow
     on:
       push:
@@ -25,3 +26,15 @@
           - name: Run unit tests with nose
             run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
 
+=======
+name: CI workflow
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
+>>>>>>> b0c213aef2c66091c9ad56350ccf77f2ebc5c5ef
